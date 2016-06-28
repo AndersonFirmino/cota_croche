@@ -1,0 +1,19 @@
+.background {
+	background-color: #e8eaf6;
+}
+
+.pull-right {
+	float: right;
+}
+
+.pull-left {
+	float: left;
+}
+
+#pos-x {
+	margin-left: 65px;
+}
+
+.space-top {
+	margin-top: 10px;
+}
