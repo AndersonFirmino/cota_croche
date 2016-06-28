@@ -28,6 +28,7 @@ class App
 
 
 
+
 	pegar_valor_por_ponto = ->
 		pontos = $('#qtd-pontos').val()
 		if pontos is ""
