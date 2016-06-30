@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-import sys, os 
+import sys
+import os
 from PyQt4 import QtWebKit, QtGui, QtCore
 from js_object import JS_Object
 
 
-
 def config():
-	app = QtGui.QApplication(sys.argv)	
+	app = QtGui.QApplication(sys.argv)
 	app.setApplicationName("Cota Croche")
 
 	pyObj = JS_Object()
@@ -16,7 +16,7 @@ def config():
 
 	webView = QtWebKit.QWebView()
 
-	# add javaScript obj in page	
+	# add javaScript obj in page
 	webView.page().mainFrame().addToJavaScriptWindowObject("pyObj", pyObj)
 
 	inspector = QtWebKit.QWebInspector()
@@ -26,21 +26,20 @@ def config():
 	)
 
 	inspector.setPage(webView.page())
-	
-	webView.load(local_url)	
-	
+
+	webView.load(local_url)
+
 	window = QtGui.QMainWindow()
 	window.setWindowTitle("Cota Croche")
-	window.resize(800, 500) # funciona para ajustar o tamanho da janela.
+	window.resize(800, 500)# funciona para ajustar o tamanho da janela.
 	window.setCentralWidget(webView)
 	window.show()
-	
+
 
 	app.exec_()
-	
+
 def main():
 	config()
-
 
 
 if __name__ == '__main__':
